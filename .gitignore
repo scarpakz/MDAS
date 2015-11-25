@@ -1,57 +1,52 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+def plus():
+    var=int(input('Enter First Number: '))
+    var1=int(input('Enter Second Number: '))
 
-# C extensions
-*.so
+    res=var+var1
+    print('\nThe sum is : ',res)
+    print('\n')
+    main()
+def minus():
+    var=int(input('Enter First Number: '))
+    var1=int(input('Enter Second Number: '))
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+    res=var-var1
+    print('\nThe difference is : ',res)
+    print('\n')
+    main()
+def mul():
+    var=int(input('Enter First Number: '))
+    var1=int(input('Enter Second Number: '))
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+    res=var*var1
+    print('\nThe product is : ',res)
+    print('\n')
+    main()
+def div():
+    var=int(input('Enter First Number: '))
+    var1=int(input('Enter Second Number: '))
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+    res=var/var1
+    print('\nThe quotient is : ',res)
+    print('\n')
+    main()
+def main():
+    print('===CHOOSE NUMBER BELOW===\n\n 1 to Add\n2 to Minus\n3 to Multiply\n4 to Divide')
+    var=str(input('\nEnter Number: '))
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
+    if var=="1":
+        plus()
+    elif var=="2":
+        minus()
+    elif var=="3":
+        mul()
+    elif var=="4":
+        div()
+    elif var==str:
+        print('ERROR! Just only choose 1,2,3,4')
+        main()
+    else:
+        print('ERROR! Just only choose 1,2,3,4')
+        main()
+main()
+    
