@@ -1,0 +1,16 @@
+#GOALS
+  #ex----> Input words/string as 'Jason', the output will be nosaJ
+  #pop and append.
+
+x_input=input("Enter Words: ")
+
+def call():
+    y_input=list(x_input)
+    content=[]
+
+    for b in range(len(y_input)):
+        x=y_input.pop()
+        content.append(x)
+    for b in content:
+        print(b, end="")
+call()
