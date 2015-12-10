@@ -1,0 +1,37 @@
+content=[]
+
+#Insert item at the end of the list..
+def to_enqueue():
+    name = input("Enter Your Name:")
+    course = input("Your Course:")
+    num_1 = "Name:"+name +"    "+"Course:"+course  #Name and Course of the user will be displayed in a line
+    content.append(num_1)                 #characters are added to content/list          
+    for i in range (len(content)):  #content will be count
+        print ("Priorty #",i+1,"  ",    content[i]) #displays the characters and will go to primary display
+    display_main()                  #(function call)will Go Back to Primary display...
+    
+#remove the first item of the list..
+def to_dequeue():
+    if (len(content)) > 0:
+        print ("You dequeued",content[0])
+        content.pop(0)
+        for i in range (len(content)):
+            print ("Next #",i+2,"  ",   content[i])
+    else:
+        print ("List is empty")
+    display_main()
+    
+#PrimaryDisplay
+
+def display_main():
+    print('\n')
+    print ("Press [1] to enqueue")
+    print ("Press [2] to dequeue")
+    x = str(input("Choose: "))
+    if x == "1":
+        to_enqueue()
+    elif x == "2":
+        to_dequeue()
+    else:
+        display_main()
+display_main()
